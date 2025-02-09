@@ -1,5 +1,10 @@
 .env
 /quickbms
-/noesisv4474
+/noesisv4474/*
 Switch_BNTX.bms
-**/MODELS/*
+
+# exclude everything
+/MODELS/*
+
+# exception to the rule
+!MODELS/.gitkeep 
