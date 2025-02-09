@@ -15,5 +15,8 @@ Currently works in Windows
 ## Instructions
 
 1. Find The Pokemon you wish to extract, i.e PM_1004 from the Pokemon Model Ripping Project
-2. Copy all the model folders into MODELS, put the respective animation folder inside each one of these.  
+2. Copy all the model folders into MODELS, put the respective animation folder inside each one of these.  The directory structure should look like this:k
+
+![directory](images/directory-structure.png)
+
 3. Run the blender.bat script.  This does everything, from creating the .png files, to the final .fbx with the animations imbedded.
