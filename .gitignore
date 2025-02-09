@@ -7,4 +7,4 @@ Switch_BNTX.bms
 /MODELS/*
 
 # exception to the rule
-!MODELS/.gitkeep 
+!/MODELS/.gitkeep 
