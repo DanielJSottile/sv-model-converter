@@ -131,7 +131,7 @@ prepare_gfbanm_files(inner_dir, gfbanm_dir)
 delete_existing_objects()
 
 # Load the regular model
-bpy.ops.custom_import_scene.pokemonscarletviolet(filepath=trmdl_filepath)
+bpy.ops.import_scene.trmdl(filepath=trmdl_filepath)
 
 bpy.context.view_layer.update()
 
@@ -152,7 +152,7 @@ gfbanm_files = [f for f in os.listdir(gfbanm_dir) if f.endswith('.gfbanm')]
 for gfbanm_file in gfbanm_files:
     gfbanm_filepath = os.path.join(gfbanm_dir, gfbanm_file)
     print(f"Importing GFBANM file: {gfbanm_filepath}")
-    gfbanm = getattr(ops, 'import').gfbanm
+    gfbanm = getattr(ops, 'import_scene').gfbanm
     gfbanm(filepath=gfbanm_filepath)
 
 # Select both armature and mesh for export
@@ -174,7 +174,7 @@ bake_eye_texture(trmdl_dir, "BakedTexture")
 delete_existing_objects()
 
 # Load the shiny version of the model
-bpy.ops.custom_import_scene.pokemonscarletviolet(filepath=trmdl_filepath, rare=True)
+bpy.ops.import_scene.trmdl(filepath=trmdl_filepath, rare=True)
 bpy.context.view_layer.update()
 
 # Rotate the imported shiny object (assuming it's the last selected object)
